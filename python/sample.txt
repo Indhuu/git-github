@@ -1,0 +1,24 @@
+Attempt = 0
+N=1
+passwordFlag = 0
+
+for Attempt in range(2):
+    #print ('Value of Attempt is: ' +str(Attempt))
+    for N in range(1,6):
+        #print ('Value of N is: ' +str(N))
+        password = input('Enter the password')
+        if password == 'charu':
+            print ('Correct password')
+            passwordFlag = 1
+            break        
+        elif ((N==5) and (Attempt == 0)):
+            print ('5 more attempts left')
+            Attempt=Attempt+1
+            break
+        elif N==5 and Attempt == 1:
+            print ('Attempts expired')
+            break
+
+    if passwordFlag == 1:
+        break
+    
